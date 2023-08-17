@@ -159,6 +159,7 @@ app.delete('/api/persona/:dni', (req, res)=> {
     query='DELETE FROM usuario WHERE persona_dni= ?'; 
     //La variale llamada persona_dni que es el dni, esta definido unas lineas mas arriba.
     // Esto hice por que al tener el dni de la persona como FK de la tabla usuario no me dejaba eliminar.
+    // Teniendo en cuenta esto al eliminar el dni X se van a eliminar de persona y de usuario.
     connection.query(query, parametros, (err, rows)=>{
         if (err){
             res.status(500).send(err);
