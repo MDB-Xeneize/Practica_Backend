@@ -10,6 +10,3 @@ create table persona(
  nickname VARCHAR(30) NOT NULL,
  password VARCHAR(30) NOT NULL
  );
- 
- 
- ALTER TABLE usuario ADD COLUMN persona_dni INT, ADD FOREIGN KEY (persona_dni) REFERENCES persona(dni);
